@@ -1,1 +1,18 @@
-<p>navbar works!</p>
+<!--este es el header-->
+<div class='navbar'>
+    <div class='logo-menu'>
+        <div class='nombreEmpresa'>
+            <span>Cartelera Caracas </span>
+        </div>
+    </div>
+    <div class='options-menu'>
+        <div class='options'>
+            <span><a [routerLink]="['/home']" style="color: gray; text-decoration: none;">Home</a></span>
+            <span><a [routerLink]="['/listapelis']" style="color: gray; text-decoration: none;">Lista de Pelis</a></span>
+            <span><a [routerLink]="['/login']" style="color: gray; text-decoration: none;">Login</a></span>
+            <div class='registeroption'>
+                <span><a [routerLink]="['/register']" style="color: gray; text-decoration: none;">Register</a></span>
+            </div>
+        </div>
+    </div>
+</div>

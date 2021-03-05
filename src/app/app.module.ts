@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PostcardComponent } from './components/postcard/postcard.component';
 import { ModelsComponent } from './models/models.component';
+import { PelisfavoritasComponent } from './pages/pelisfavoritas/pelisfavoritas.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ModelsComponent } from './models/models.component';
     FooterComponent,
     PostcardComponent,
     ServicesComponent,
-    ModelsComponent
+    ModelsComponent,
+    PelisfavoritasComponent
   ],
   imports: [
     BrowserModule,
