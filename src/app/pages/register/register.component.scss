@@ -1,0 +1,67 @@
+.form-square{
+    display: flex;
+    justify-content: center;
+}
+
+.form-square .form-square-background{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    background-color: blue;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(225, 225, 225, 0.8);
+}
+
+.form-square .form-square-background .registerAuth-form .form-tittle{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-square .form-square-background .registerAuth-form .send-button{
+    height: 40px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: black;
+    
+}
+
+.form-square .form-square-background .registerAuth-form .withGoogle{
+    height: 40px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: black;
+    
+}
+
+input{
+    width: 300px;
+    border-radius: 5px;                      
+    font-size: 15px;            
+    margin: 10px 10px 10px 5px; 
+    padding: 10px 10px 10px 5px;
+    display: block;             
+    border: none;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+}

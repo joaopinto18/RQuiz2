@@ -1,7 +1,9 @@
-.wrapper-listapelis{
+
+.wrapper-postcard{
+    margin: auto;
     height: 100%;
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    background-color: yellow;
 }

@@ -1,18 +1,17 @@
-
 .postCard{
-    height: 400px;
-    width: 300px;
+    height: 225px;
+    width: 125px;
     border-radius: 7px;
     box-shadow: 0 0 3px 0 gray;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 50px;
+    background-color: white;
 }
 
 .postCard .postCard-tittle{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     color: gray;
     margin-bottom: 10px;
@@ -27,7 +26,7 @@
 
 .postCard .contentCard{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     color: gray;
     margin-bottom: 10px;
 }

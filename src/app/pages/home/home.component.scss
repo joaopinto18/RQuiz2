@@ -1,0 +1,30 @@
+.wrapper-home{
+    width: 100%;
+    background-color: blue;
+}
+
+.wrapper-home .clas-title{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.wrapper-home .clas-title .buttonAccederLisaPelis{
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.wrapper-home .listapelis{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 270px;
+}
+
