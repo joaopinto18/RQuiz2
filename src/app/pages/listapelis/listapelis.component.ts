@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieModel } from 'src/app/models/movie-model';
 import { PeliculasService } from 'src/app/services/peliculas.service';
+import { HttpClient } from '@angular/common/http'
+
 
 @Component({
   selector: 'app-listapelis',
@@ -8,7 +10,7 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
   styleUrls: ['./listapelis.component.scss']
 })
 export class ListapelisComponent implements OnInit {
-
+  page:number=1;
   data: any;
 
   /**
@@ -17,8 +19,8 @@ export class ListapelisComponent implements OnInit {
    */
 
    //en data esta todo lo de la api
-  constructor(private movie: PeliculasService) { 
-    this.movie.apiData().subscribe((data)=>{
+  constructor(private movie: PeliculasService, private http: HttpClient) { 
+    this.apiData().subscribe((data)=>{
       console.warn(data);
       this.data=data;
     });
@@ -27,11 +29,39 @@ export class ListapelisComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /**
-   * FUNCION QUE TE LEA TODAS LAS PELIS, TE SAQUE LOS 4 DATOS QUE NECESITAS DE CADA PELI Y DE ESA FORMA TE LOS 
-   * LLEVAS AL POST
-   */
+  apiData(){
+    let url = 'https://api.themoviedb.org/3/discover/movie?api_key=b4699a9de35f57cb87fbcb373680a922&page=' + `${this.page}`;
+    return this.http.get(url);
+  }
 
+/**
+ * PASA A LA SIGUIENTE PELI
+ */
 
+  siguientePeli(){
+    this.page++;
+    if(this.page==51){
+      this.page=1;
+    }
+    this.apiData().subscribe((data)=>{
+      console.warn(data);
+      this.data=data;
+  });
+}
+
+/**
+ * PASA A LA PELI ANTERIOR
+ */
+
+anteriorPeli(){
+  this.page--;
+  if(this.page==0){
+    this.page=50;
+  }
+  this.apiData().subscribe((data)=>{
+    console.warn(data);
+    this.data=data;
+});
+}
 
 }

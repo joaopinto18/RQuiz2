@@ -2,8 +2,14 @@
 <div class='wrapper-postcard'>
     <!--data.results es las peliculas en la api-->
     <!--item es cada pelicula-->
-    <ng-container *ngFor="let item of data.results">
-        <app-postcard [postModel] = item></app-postcard>
-    </ng-container>
+    <div class='wrapper-buttons'>
+        <button class='banterior' (click)="anteriorPeli()">Last page</button>
+        <button class='bsiguiente' (click)="siguientePeli()">Next page</button>
+    </div>
+    <div class='wrapper-grid'>
+        <ng-container *ngFor="let item of data.results">
+            <app-postcard [postModel] = item></app-postcard>
+        </ng-container>
+    </div>
 </div>
 
