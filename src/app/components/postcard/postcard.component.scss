@@ -1,6 +1,6 @@
 
 .postCard{
-    height: 600px;
+    height: 675px;
     width: 250px;
     border-radius: 7px;
     box-shadow: 0 0 3px 0 gray;
@@ -32,6 +32,38 @@
     margin-bottom: 10px;
 }
 
+.postCard .contentCard .bontones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.postCard .contentCard .bontones .details{
+    height: 40px;
+    width: 48%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 3px 0 gray;
+    color: gray;
+}
+
+.postCard .contentCard .bontones .Add-favorite{
+    height: 40px;
+    width: 48%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 3px 0 gray;
+    color: gray;
+}
 
 
 .postCard .contentCard .img-container .img{

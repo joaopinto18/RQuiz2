@@ -7,15 +7,16 @@
     </div>
     <div class='options-menu'>
         <div class='options'>
-            <span><a [routerLink]="['/home']" style="color: gray; text-decoration: none;">Home</a></span>
-            <span><a [routerLink]="['/listapelis']" style="color: gray; text-decoration: none;">Movie List</a></span>
-            <span *ngIf="!usernavbar"><a [routerLink]="['/login']" style="color: gray; text-decoration: none;">Login</a></span>
+            <span><a [routerLink]="['/home']" style="color: rgb(78, 77, 77); text-decoration: none;">Home</a></span>
+            <span><a [routerLink]="['/listapelis']" style="color: rgb(78, 77, 77); text-decoration: none;">Movie List</a></span>
+            <span *ngIf="!usernavbar"><a [routerLink]="['/login']" style="color: rgb(78, 77, 77); text-decoration: none;">Login</a></span>
             <div class='registeroption' *ngIf="!usernavbar">
-                <span><a [routerLink]="['/register']" style="color: gray; text-decoration: none;">Register</a></span>
+                <span><a [routerLink]="['/register']" style="color: rgb(255, 0, 43); text-decoration: none;">Register</a></span>
             </div>
-            <span *ngIf="usernavbar"><a [routerLink]="['/pelisfavoritas']" style="color: gray; text-decoration: none;">Favorite Movies</a></span>
-            <span *ngIf="usernavbar" style="color: gray; text-decoration: none;">Bienvenido, {{usernavbar.displayName}}</span>
-            <button class='outButton' *ngIf="usernavbar" (click)="HandleOut()" style="color: gray; text-decoration: none; font-weight: bold;">Logout</button>
+            <span *ngIf="usernavbar"><a [routerLink]="['/reservar']" style="color: rgb(78, 77, 77); text-decoration: none;">Reserve Movie</a></span>
+            <span *ngIf="usernavbar"><a [routerLink]="['/pelisfavoritas']" style="color: rgb(78, 77, 77); text-decoration: none;">Favorite Movies</a></span>
+            <span *ngIf="usernavbar" style="color: rgb(78, 77, 77); text-decoration: none;">Bienvenido, {{usernavbar.displayName}}</span>
+            <button class='outButton' *ngIf="usernavbar" (click)="HandleOut()" style="color: rgb(255, 0, 43); text-decoration: none; font-weight: bold;">Logout</button>
         </div>
     </div>
 </div>
