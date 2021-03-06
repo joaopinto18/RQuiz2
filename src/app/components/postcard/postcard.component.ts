@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MovieModel } from 'src/app/models/movie-model';
 
 @Component({
   selector: 'app-postcard',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./postcard.component.scss']
 })
 export class PostcardComponent implements OnInit {
+
+  @Input() postModel!: MovieModel;
 
   constructor() { }
 

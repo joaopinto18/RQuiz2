@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServicesComponent } from './services/services.component';
 import { PagesComponent } from './pages/pages.component';
 import { RecurrentComponent } from './recurrent/recurrent.component';
 import { ComponentsComponent } from './components/components.component';
@@ -21,10 +20,21 @@ import { ModelsComponent } from './models/models.component';
 import { PelisfavoritasComponent } from './pages/pelisfavoritas/pelisfavoritas.component';
 import { MiniPostcardComponent } from './components/mini-postcard/mini-postcard.component';
 
+//insertado de modulos para el tema de firebase
+import { AngularFireModule } from '@angular/fire';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+import { MoviesComponent } from './services/movies/movies.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    ServicesComponent,
     PagesComponent,
     RecurrentComponent,
     ComponentsComponent,
@@ -38,14 +48,21 @@ import { MiniPostcardComponent } from './components/mini-postcard/mini-postcard.
     NavbarComponent,
     FooterComponent,
     PostcardComponent,
-    ServicesComponent,
     ModelsComponent,
     PelisfavoritasComponent,
-    MiniPostcardComponent
+    MiniPostcardComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

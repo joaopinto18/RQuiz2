@@ -1,7 +1,7 @@
 
 .postCard{
-    height: 400px;
-    width: 300px;
+    height: 600px;
+    width: 350px;
     border-radius: 7px;
     box-shadow: 0 0 3px 0 gray;
     padding-top: 20px;
@@ -30,6 +30,17 @@
     font-size: 15px;
     color: gray;
     margin-bottom: 10px;
+}
+
+
+
+.postCard .contentCard .img-container .img{
+    object-fit: cover;
+    margin-top: 10px;
+    height: 320px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
 }
 
 span{

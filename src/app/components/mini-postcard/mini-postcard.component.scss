@@ -1,6 +1,6 @@
 .postCard{
     height: 225px;
-    width: 125px;
+    width: 110px;
     border-radius: 7px;
     box-shadow: 0 0 3px 0 gray;
     padding-top: 20px;
@@ -31,6 +31,16 @@
     margin-bottom: 10px;
 }
 
+.postCard .contentCard .img{
+    object-fit: cover;
+    margin-top: 10px;
+    height: 320px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+}
+
 span{
     font-weight: bold;
 }
+

@@ -4,12 +4,15 @@
         <button class='buttonAccederLisaPelis'>Ir a Lista de pelis</button>
     </div>
     <div class='listapelis'>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
-        <app-mini-postcard></app-mini-postcard>
+        <ng-container>
+            <app-mini-postcard [postModel] = data.results[0]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[1]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[2]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[3]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[4]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[5]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[6]></app-mini-postcard>
+            <app-mini-postcard [postModel] = data.results[7]></app-mini-postcard>
+        </ng-container>
     </div>
 </div>

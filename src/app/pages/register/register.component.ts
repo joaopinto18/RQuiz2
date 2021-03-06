@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  formAuth!:FormGroup;
+
+  constructor(private authService: AuthServiceService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
+
+  /**
+   * REGISTER WITH GOOGLE
+   */
+
+  registerWithGoogle(){
+    console.log('registrandose con Google');
+    this.authService.registerWithGoogleAuth();
+    this.authService.getCurrentUser().subscribe((user)=>{user.updatePassword("joao")});
+  };
 
 }

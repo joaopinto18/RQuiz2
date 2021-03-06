@@ -4,6 +4,7 @@ import { DetallecadapeliComponent } from './pages/detallecadapeli/detallecadapel
 import { HomeComponent } from './pages/home/home.component';
 import { ListapelisComponent } from './pages/listapelis/listapelis.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PelisfavoritasComponent } from './pages/pelisfavoritas/pelisfavoritas.component';
 import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'listapelis', component:ListapelisComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
+  {path:'pelisfavoritas', component:PelisfavoritasComponent}
 ];
 
 @NgModule({

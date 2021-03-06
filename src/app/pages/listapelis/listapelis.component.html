@@ -1,8 +1,9 @@
 
 <div class='wrapper-postcard'>
-    <app-postcard></app-postcard>
-    <app-postcard></app-postcard>
-    <app-postcard></app-postcard>
-    <app-postcard></app-postcard>
+    <!--data.results es las peliculas en la api-->
+    <!--item es cada pelicula-->
+    <ng-container *ngFor="let item of data.results">
+        <app-postcard [postModel] = item></app-postcard>
+    </ng-container>
 </div>
 

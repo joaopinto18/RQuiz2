@@ -8,11 +8,14 @@
     <div class='options-menu'>
         <div class='options'>
             <span><a [routerLink]="['/home']" style="color: gray; text-decoration: none;">Home</a></span>
-            <span><a [routerLink]="['/listapelis']" style="color: gray; text-decoration: none;">Lista de Pelis</a></span>
-            <span><a [routerLink]="['/login']" style="color: gray; text-decoration: none;">Login</a></span>
-            <div class='registeroption'>
+            <span><a [routerLink]="['/listapelis']" style="color: gray; text-decoration: none;">Movie List</a></span>
+            <span *ngIf="!usernavbar"><a [routerLink]="['/login']" style="color: gray; text-decoration: none;">Login</a></span>
+            <div class='registeroption' *ngIf="!usernavbar">
                 <span><a [routerLink]="['/register']" style="color: gray; text-decoration: none;">Register</a></span>
             </div>
+            <span *ngIf="usernavbar"><a [routerLink]="['/pelisfavoritas']" style="color: gray; text-decoration: none;">Favorite Movies</a></span>
+            <span *ngIf="usernavbar" style="color: gray; text-decoration: none;">Bienvenido, {{usernavbar.displayName}}</span>
+            <button class='outButton' *ngIf="usernavbar" (click)="HandleOut()" style="color: gray; text-decoration: none; font-weight: bold;">Logout</button>
         </div>
     </div>
 </div>

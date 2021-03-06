@@ -1,16 +1,18 @@
 <div class='postCard'>
     <div class='postCard-tittle'>
-        <span>Nombre de pelicula generico</span>
+        <span>{{postModel.title}}</span>
     </div>
     <div class='separatorCard'></div>
     <div class='contentCard'>
-        <span>Nombre:</span>
-        <p>nombre generico</p>
-        <span>categoria:</span>
-        <p>categoria generica</p>
-        <span>repertorio:</span>
-        <p>prepertorio generico</p>
-        <span>fecha de estreno:</span>
-        <p>fecha de estreno generica</p>
+        <span>Para adultos:</span>
+        <p>{{postModel.adult}}</p>
+        <span>Popularity:</span>
+        <p>{{postModel.popularity}}</p>
+        <span>Original Idiom:</span>
+        <p>{{postModel.original_language}}</p>
+        <span>Image:</span>
+        <div class='img-container'>
+            <img src="https://image.tmdb.org/t/p/w500/{{postModel.poster_path}}" class='img'>
+        </div>
     </div>
 </div>
